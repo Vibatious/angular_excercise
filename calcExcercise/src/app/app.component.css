@@ -9,12 +9,9 @@ h3{
   padding: 10px;
   align-content: center
 }
-#operands{
-  display: inline-block;
-}
-#operator{
-  width: 30px;
-  display: inherit;
+#container span{
+ display: inline-block;
+ width: 30px;
 }
 input[type='button']{
   margin: 5px;
