@@ -43,7 +43,7 @@ export class AppComponent {
                     this.display = 'inline-block';
                    }
                   }else{
-                    this.op_sign = "op";
+                    this.op_sign = "";
                     this.answer=this.num1=this.num2=0;
                     this.display = "none";
                     console.log(alert("divisor cannot be zero"));
