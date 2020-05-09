@@ -1,18 +1,17 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { FormsModule} from '@angular/forms'
 import { AppComponent } from './app.component';
 import { PriceSearchPipe } from './price-search.pipe';
-import { StockValueColorPipe } from './stock-value-color.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     PriceSearchPipe,
-    StockValueColorPipe
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

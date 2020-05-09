@@ -1,12 +1,18 @@
 @-moz-document url-prefix() {
   fieldset { display: table-cell; }
 }
-
+.app_header{
+  font-size:4em;
+  font-weight: 800;
+  text-align: center;
+}
 .preview{
   width:60px;
   height: 50px;
 }
 .itemrow td{
+  font-size:1.2em;
+  font-weight: 500;
     vertical-align: middle;
 }
 .side_preview{

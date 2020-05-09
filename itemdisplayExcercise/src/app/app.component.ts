@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, TemplateRef } from '@angular/core';
 import { productdetail, dataProducts } from 'src/dataProduct';
 
 @Component({
@@ -8,18 +8,20 @@ import { productdetail, dataProducts } from 'src/dataProduct';
 })
 export class AppComponent {
   itemData:productdetail[] = dataProducts;
-  sidePreview:string="";
-
+  leftPreview:string="";
+  rightPreview:string="";
+  startPrice:number;
 
   changePreview=(info)=>{
-    setInterval(()=>{
-      this.changePreview(info);
-    },1000)
 
+    let time = new Date().getTime();
+    this.leftPreview =info.src=dataProducts[info.id-1].frontPreviewUrl;
+    this.rightPreview =info.src=dataProducts[info.id-1].backPreviewUrl;
   }
 
   endPreview=(info)=>{
-    this.sidePreview="";
+    this.leftPreview="";
+    this.rightPreview="";
     info.src=dataProducts[info.id-1].frontPreviewUrl;
   }
 }
