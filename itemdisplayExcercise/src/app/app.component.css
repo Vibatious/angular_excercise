@@ -1,0 +1,19 @@
+@-moz-document url-prefix() {
+  fieldset { display: table-cell; }
+}
+
+.preview{
+  width:60px;
+  height: 50px;
+}
+.itemrow td{
+    vertical-align: middle;
+}
+.preview:hover{
+  
+}
+
+.itemrow{
+  text-align: center;
+ vertical-align: text-bottom;
+}
