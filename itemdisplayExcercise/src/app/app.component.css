@@ -9,8 +9,13 @@
 .itemrow td{
     vertical-align: middle;
 }
-.preview:hover{
-  
+.side_preview{
+  justify-content: flex-end;
+  margin: 150px auto auto auto ;
+
+  width: 300px;
+  /* align-content: center; */
+  /* position: absolute; */
 }
 
 .itemrow{

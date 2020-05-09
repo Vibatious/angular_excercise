@@ -2,7 +2,9 @@
 <div class="container-fluid">
 
   <div class="row">
-    <div class="col-md-3"></div>
+    <div class="col-md-3">
+            <img [src]='sidePreview' class="side_preview" *ngIf="sidePreview.length">
+    </div>
     <div class="col-md-7">
         <h3 class="app_header">Shirt </h3>
         <br/>
@@ -23,7 +25,7 @@
               <tbody>
                   <tr *ngFor="let item of itemData" class="itemrow">
                       <td>
-                        <img #preview [src]="item.frontPreviewUrl" class="preview" id="item.productId" (pointerover)="changePreview(preview)"/>
+                        <img #preview [src]="item.frontPreviewUrl" class="preview" [id]="item.productId" (pointermove)="changePreview(preview)" (pointerleave)="endPreview(preview)" />
                       </td>
                       <td>{{item.productCompany}}</td>
                       <td>{{item.price}}</td>

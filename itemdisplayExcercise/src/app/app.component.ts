@@ -8,9 +8,18 @@ import { productdetail, dataProducts } from 'src/dataProduct';
 })
 export class AppComponent {
   itemData:productdetail[] = dataProducts;
+  sidePreview:string="";
+
 
   changePreview=(info)=>{
-    console.log(info)
-    // info.src = dataProducts[info.id].backPreviewUrl;
+    setInterval(()=>{
+      this.changePreview(info);
+    },1000)
+
+  }
+
+  endPreview=(info)=>{
+    this.sidePreview="";
+    info.src=dataProducts[info.id-1].frontPreviewUrl;
   }
 }
