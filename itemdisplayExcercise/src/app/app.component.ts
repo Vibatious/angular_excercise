@@ -1,4 +1,4 @@
-import { Component, ElementRef, TemplateRef } from '@angular/core';
+import { Component, ElementRef, TemplateRef, OnInit } from '@angular/core';
 import { productdetail, dataProducts } from 'src/dataProduct';
 
 @Component({
@@ -6,12 +6,15 @@ import { productdetail, dataProducts } from 'src/dataProduct';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  itemData:productdetail[] = dataProducts;
+export class AppComponent implements OnInit {
+  itemData:productdetail[];
   leftPreview:string="";
   rightPreview:string="";
   startPrice:number;
 
+  ngOnInit(){
+      this.itemData = dataProducts;
+  }
   changePreview=(info)=>{
 
     let time = new Date().getTime();

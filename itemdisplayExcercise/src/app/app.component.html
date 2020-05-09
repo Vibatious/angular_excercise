@@ -6,7 +6,7 @@
             <img [src]='leftPreview' class="side_preview" *ngIf="leftPreview.length">
     </div>
     <div class="col-md-6">
-        <h3 class="app_header">Shirt </h3>
+        <h3 class="app_header">T-Shirt Zone </h3>
         <br/>
         <div>
             <input type="text" class="form-control" placeholder="Enter the starting price" [(ngModel)]="startPrice">
@@ -23,7 +23,7 @@
                 </tr>
               </thead>
               <tbody>
-                  <tr *ngFor="let item of itemData|priceSearch:startPrice" class="itemrow">
+                  <tr *ngFor="let item of itemData|priceSearch:startPrice" class="itemrow" #tr >
                       <td>
                         <img #preview [src]="item.frontPreviewUrl" class="preview" [id]="item.productId" (pointermove)="changePreview(preview)" (pointerleave)="endPreview(preview)" />
                       </td>
