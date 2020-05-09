@@ -13,8 +13,8 @@ export class AppComponent {
   num2 :number = 0;
   answer:number = 0;
 
-  operation = (op) => {
-    switch(op){
+  operation = (op1) => {
+    switch(op1){
       case 'add': this.answer = Number(this.num1)+ Number(this.num2);
                   this.op_sign = "+";
                   if(this.display == 'none'){
@@ -36,11 +36,12 @@ export class AppComponent {
                   }
               break;
 
-      case 'div': if(this.num2 !== 0){
+      case 'divison': if(this.num2 !== 0){
                     this.answer = Number(this.num1) / Number(this.num2);
                     this.op_sign = "/";
                     if(this.display == 'none'){
                     this.display = 'inline-block';
+                    console.log("h");
                    }
                   }else{
                     this.op_sign = "";

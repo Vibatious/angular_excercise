@@ -8,11 +8,11 @@
       <span id="answer" [innerHTML] = 'answer' [style.display]='display'></span>
   </div>
   <div id="buttons">
-    <input type="button" id="add" value="+"  name = "add" (click)="operation('add')"/>
-    <input type="button" id="sub"value="-"   (click)="operation('sub')"/>
-    <input type="button" id="mul" value="*"   (click)="operation('mul')"/>
-    <input type="button" id="divison" value="/"   (click)="operation('div')"/>
-    <input type="button" id="clear" value="clear"   (click)="operation('clear')"/>
+    <input type="button" #box1 id="add" value="+"  name = "add" (click)="operation(box1.id)"/>
+    <input type="button" #box2 id="sub" value="-"   (click)="operation(box2.id)"/>
+    <input type="button" #box3 id="mul" value="*"   (click)="operation(box3.id)"/>
+    <input type="button" #box4 id="divison" value="/"   (click)="operation(box4.id)"/>
+    <input type="button" #box5 id="clear" value="clear"   (click)="operation(box5.id)"/>
 
   </div>
 
