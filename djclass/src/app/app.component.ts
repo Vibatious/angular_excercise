@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { IProduct } from './IProduct';
 
 @Component({
   selector: 'app-root',
@@ -6,17 +7,55 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 
-export class AppComponent {
-  title = 'djclass';
-  
-  height = 100;
-  name = '';
-  pName: string = '';
-  hello = () =>{
-    this.height+=100;
-    if(this.height>1000){
-      this.height = 100;
-    }
-    console.log("Send to server " + this.pName)
+export class AppComponent implements OnInit{
+  title = 'djclass class2';
+  products: IProduct[] = [];
+  imageWidth:number = 50;
+  imageMargin:number = 30;
+  showImage = false;
+  searchtext:string="";
+
+  toggleImage=()=>{
+    this.showImage = !this.showImage;
   }
+  ngOnInit(){
+    this.products = this.getProducts();
+    console.log(this.products);
+  }
+  getProducts() : IProduct[]{
+       return [
+         {
+          productId:1,
+          pName:"Love",
+          pCode:"fhhd",
+          rDate:"March 19",
+          price:96,
+          des:"Loose Weight",
+          starRating:3.9,
+          imageUrl:""
+         },
+         {
+          productId:2,
+          pName:"Kush",
+          pCode:"fhhd",
+          rDate:"March 19",
+          price:96,
+          des:"Loose Weight",
+          starRating:3.9,
+          imageUrl:""
+         },
+         {
+          productId:3,
+          pName:"rajp",
+          pCode:"fhhd",
+          rDate:"March 19",
+          price:96,
+          des:"Loose Weight",
+          starRating:3.9,
+          imageUrl:""
+         }
+       ]
+  }
+
+
 }
