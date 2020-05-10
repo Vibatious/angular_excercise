@@ -1,5 +1,5 @@
 import { Component, ElementRef, TemplateRef, OnInit } from '@angular/core';
-import { productdetail, dataProducts } from 'src/dataProduct';
+import { productdetail, dataProducts } from './dataProduct';
 
 @Component({
   selector: 'app-root',
@@ -16,8 +16,6 @@ export class AppComponent implements OnInit {
       this.itemData = dataProducts;
   }
   changePreview=(info)=>{
-
-    let time = new Date().getTime();
     this.leftPreview =info.src=dataProducts[info.id-1].frontPreviewUrl;
     this.rightPreview =info.src=dataProducts[info.id-1].backPreviewUrl;
   }

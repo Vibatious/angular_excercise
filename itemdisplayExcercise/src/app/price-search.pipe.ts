@@ -10,6 +10,7 @@ export class PriceSearchPipe implements PipeTransform {
     if(!args){
       return value;
     }
+
     return value.filter(item=>{return item.price >= args;})
   }
 
