@@ -1,32 +1,9 @@
 <div class="container">
-  <br/>
-    <h1 class="text-center text-info">{{title}}</h1>
-    <input type="search" [(ngModel)]='searchtext'>
-    <table class="table">
-      <thead>
-        <tr>
-        <button  class="btn btn-info" (click)="toggleImage()">{{showImage?'Hide':'Show'}}Image</button>
-        <th>Products</th>
-        <th>Code</th>
-        <th>Available</th>
-        <th>Price</th>
-        <th>Star Rating</th>
-      </tr>
-      </thead>
-      <tbody>
-          <tr *ngFor="let product of products|productsearch:searchtext">
-            <td>
-              <img *ngIf="showImage" [src]="product.imageUrl" alt="log" [style.width.px]="imageWidth" [style.margin.px]="imageMargin"/>
-            </td>
-            <td>{{product.pName|uppercase}}</td>
-            <td>{{product.pCode}}</td>
-            <td>{{product.rDate}}</td>
-            <td>{{product.price|currency}}</td>
-            <td>{{product.starRating}}</td>
-          </tr>
-      </tbody>
-
-    </table>
+  <h2 class="text-enter">Component communication</h2>
+  <button (click)="updateCount()">UC</button>
+  <div class="row">
+    <app-message [message]="parent_message" [count]='count.counter' (sendSignaltoParent)='parentAbc($event)' ></app-message>
+  </div>
 </div>
 
 

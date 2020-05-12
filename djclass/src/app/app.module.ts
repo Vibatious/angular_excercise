@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 import {FormsModule} from '@angular/forms'
 import { AppComponent } from './app.component';
 import { ProductsearchPipe } from './productsearch.pipe';
+import { MessageComponent } from './message/message.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProductsearchPipe
+    ProductsearchPipe,
+    MessageComponent
   ],
   imports: [
     BrowserModule,
