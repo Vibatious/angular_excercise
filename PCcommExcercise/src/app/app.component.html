@@ -1,0 +1,10 @@
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-md-3">
+        <app-product-list #itemlist [itemDetail]="itemData" #itemlist ></app-product-list>
+      </div>
+      <div class="col-md-5" *ngIf="itemlist.show">
+        <app-product-show [singleDataItem]=itemlist.activeItem ></app-product-show>
+      </div>
+    </div>
+  </div>

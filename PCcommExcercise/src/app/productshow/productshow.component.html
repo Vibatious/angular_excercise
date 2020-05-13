@@ -1,0 +1,50 @@
+<!-- <div>{{singleDataItem['productId']}}</div> -->
+
+<div class="card mb-3" style="max-width: 600px;">
+  <div class="card-header row no-gutters">
+  <div class="col-md-3">
+      <img [src]="singleDataItem['image']" class="card-img" alt="..." width="60px" height="70px">
+    </div>
+    <div class="col-md-6 offset-md-1 text-center title" >
+        {{singleDataItem['name']}}
+    </div>
+    <div class="col-md-1 cancel_btn" (click)="cancelList">
+          <svg class="bi bi-x-circle-fill cancel_btn" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg" >
+            <path fill-rule="evenodd" d="M16 8A8 8 0 110 8a8 8 0 0116 0zm-4.146-3.146a.5.5 0 00-.708-.708L8 7.293 4.854 4.146a.5.5 0 10-.708.708L7.293 8l-3.147 3.146a.5.5 0 00.708.708L8 8.707l3.146 3.147a.5.5 0 00.708-.708L8.707 8l3.147-3.146z" clip-rule="evenodd"/>
+          </svg>
+    </div>
+  </div>
+    <div class="row no-gutters">
+
+      <div class="col-md-9 offset-md-1 text-center ">
+        <div class="card-body">
+          <h5 class="card-title">{{singleDataItem['description']}}</h5>
+              <table class="table table-bordered table-dark">
+                <tbody >
+                  <tr>
+                    <th scope="row">Price:</th>
+                    <td>{{singleDataItem['price']|currency:'INR'}}</td>
+                  </tr>
+                  <tr>
+                      <th scope="row">Owner:</th>
+                      <td>{{singleDataItem['owner']}}</td>
+                    </tr>
+                      <tr>
+                          <th scope="row">Color:</th>
+                          <td>{{singleDataItem['color']}}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Quantity:</th>
+                            <td>{{singleDataItem['quantity']}}</td>
+                          </tr>
+                          <tr>
+                              <th scope="row">Stock:</th>
+                              <td>{{singleDataItem['isStock']}}</td>
+                          </tr>
+                </tbody>
+              </table>
+              <button class="btn btn-primary">Update</button>
+        </div>
+      </div>
+    </div>
+  </div>

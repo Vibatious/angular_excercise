@@ -1,0 +1,10 @@
+.title{
+  font-weight: 700;
+  font-size: 50px;
+}
+.cancel_btn{
+  justify-content: space-evenly;
+  display: grid;
+  position: relative;
+}
+
