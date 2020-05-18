@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import {MessageComponent} from './message/message.component'
+import { DemoServiceService } from './demo-service.service';
  @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,9 +8,11 @@ import {MessageComponent} from './message/message.component'
 })
 
 export class AppComponent implements OnInit{
-  title = 'djclass class2';
+  title = 'djclassclass2';
   parent_message = "I am passed from Parent";
 
+
+  constructor(private dem02:DemoServiceService) {}
   @ViewChild(MessageComponent) mchild:MessageComponent;
 
   count={
@@ -24,6 +27,7 @@ export class AppComponent implements OnInit{
   }
   ngOnInit(){
     console.log(this.mchild);
+    this.dem02.get('pop')
   }
   ngAfterViewInit(){
     console.log(this.mchild);
